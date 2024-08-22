@@ -5,6 +5,8 @@ from binge.api.serializers import MovieSerializer, PlatformSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+
+# class Review()
 class MovieAV(APIView):
     
     def get(self, request):  
