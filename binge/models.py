@@ -9,7 +9,6 @@ class Platform(models.Model):
     def __str__(self):
         return self.site
         
-        
 class Movie(models.Model):
     title = models.CharField(max_length=30)
     director = models.CharField(max_length=30)
@@ -17,8 +16,7 @@ class Movie(models.Model):
     release_date = models.DateField()
 
     def __str__(self):
-        return  self.title
-    
+        return  self.title  
     
 class Review(models.Model):
     rating = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])

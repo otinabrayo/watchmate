@@ -5,6 +5,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Review
+        # exclude = ('watchlist',)
         fields = '__all__'
 
 class MovieSerializer(serializers.ModelSerializer):
@@ -12,10 +13,9 @@ class MovieSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Movie
-        fields = '__all__'
+        fields = '__all__'       
         
-        
-class PlatformSerializer(serializers.HyperlinkedModelSerializer):
+class PlatformSerializer(serializers.ModelSerializer):
     platforms = MovieSerializer(many=True, read_only=True)
     
     class Meta:
